@@ -32,7 +32,7 @@ $(function() {
       var results = response.result;
       $.each(results.items, function(index, item) {
         console.log(item);
-        $("#videos-display-here").eppend(item.id.videoId);
+        $("#videos-display-here").append(item.id.videoId);
       });
     });
   });
