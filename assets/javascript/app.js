@@ -28,7 +28,10 @@ $(function() {
     });
     //execute this request
     request.execute(function(response) {
-      console.log(response);
+      var results = respnose.result;
+      $.each(results.items, function(index, item) {
+        console.log(item);
+      });
     });
   });
 });
