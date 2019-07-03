@@ -33,7 +33,7 @@ $(function() {
       $.each(results.items, function(index, item) {
         console.log(item);
         $("#videos-display-here").html(
-          "<iframe id='player' type='text/html' width='640' height='390' src='http://www.youtube.com/embed/" + 
+          "<iframe id='player' type='text/html' width='640' height='390' src='https://www.youtube.com/embed/" + 
           item.id.videoId + "?enablejsapi=1&origin=http://example.com' frameborder='0'></iframe>"
           );
       });
