@@ -28,7 +28,7 @@ $(function() {
     });
     //execute this request
     request.execute(function(response) {
-      var results = respnose.result;
+      var results = response.result;
       $.each(results.items, function(index, item) {
         console.log(item);
       });
