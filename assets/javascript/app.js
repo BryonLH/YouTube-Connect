@@ -22,7 +22,8 @@ $(function() {
     var request = gapi.client.youtube.search.list({
       part: "snippet",
       type: "video",
-      q: encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
+      // q: encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
+      q: $("#search").val(),
       maxResults: 3,
       order: "viewCount"
     });
@@ -30,8 +31,8 @@ $(function() {
     request.execute(function(response) {
       var results = response.result;
       $.each(results.items, function(index, item) {
-        // console.log(item);
-        $("#results").eppend(item.id.videoId+" "+item.snippet.title+"<br>");
+        console.log(item);
+        $("#videos-display-here").eppend(item.id.videoId);
       });
     });
   });
