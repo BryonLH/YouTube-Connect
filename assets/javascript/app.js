@@ -30,7 +30,8 @@ $(function() {
     request.execute(function(response) {
       var results = response.result;
       $.each(results.items, function(index, item) {
-        console.log(item);
+        // console.log(item);
+        $("#results").eppend(item.id.videoId+" "+item.snippet.title+"<br>");
       });
     });
   });
