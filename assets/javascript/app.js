@@ -24,7 +24,7 @@ $(function() {
       type: "video",
       // q: encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
       q: $("#search").val(),
-      maxResults: 3,
+      maxResults: 1,
       order: "viewCount"
     });
     //execute this request
